@@ -50,3 +50,24 @@
   border-radius: 50%;
   background-color: darkgreen;
 }
+
+.lost{
+  height: calc(50vh - 60px);
+  padding: 30px;
+  margin-left: 50px;
+  background-color: lightgrey;
+}
+
+.timer{
+  padding: 30px;
+  margin-left: 20px;
+}
+
+.timer button{
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  /*background-color: #c1cfdc;*/
+  border-color: lightgray;
+  font-size: 16px;
+}
