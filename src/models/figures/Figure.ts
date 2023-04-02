@@ -1,0 +1,31 @@
+import logo from "../../assets/horseB.png"
+import {Colors} from "../Colors";
+import {Cell} from "../Cell";
+
+export enum FigureNames {
+    FIGURE,
+    HORSE = "Конь",
+    QUEEN = "Королева",
+    KING = "Король",
+    BISHOP = "Слон",
+    PAWN = "Пешка",
+    ROOK = "Ладья"
+}
+
+export class Figure {
+    color: Colors;
+    logo: typeof logo | null;
+    cell: Cell;
+    name: FigureNames;
+    id: number;
+
+    constructor(color: Colors, cell: Cell) {
+        this.color = color;
+        this.cell = cell;
+        this.cell.figure = this;
+        this.name = FigureNames.FIGURE;
+        this.id = Math.random();
+        this.logo = null;
+    }
+
+}
