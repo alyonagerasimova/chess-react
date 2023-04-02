@@ -1,10 +1,11 @@
 import logo from "../../assets/horseB.png"
 import {Colors} from "../Colors";
 import {Cell} from "../Cell";
+import {King} from "./King";
 
 export enum FigureNames {
     FIGURE,
-    HORSE = "Конь",
+    Knight = "Конь",
     QUEEN = "Королева",
     KING = "Король",
     BISHOP = "Слон",
@@ -28,4 +29,15 @@ export class Figure {
         this.logo = null;
     }
 
+    canMove(target: Cell) : boolean {
+        if(target.figure?.color === this.color){
+            return false;
+        }
+        if(target.figure?.name === FigureNames.KING){
+            return false;
+        }
+        return true;
+    }
+
+    moveFigure(target: Cell){}
 }

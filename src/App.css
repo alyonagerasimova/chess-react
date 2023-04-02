@@ -27,9 +27,26 @@
   flex-wrap: wrap;
 }
 
+.cell img{
+  height: 48px;
+  width: 48px;
+  position: relative;
+}
+
 .white{
   background-color: #ad7a54d4;
 }
 .black{
   background-color: #f8e0bdc4;
+}
+
+.selected {
+  background-color: brown;
+}
+
+.available{
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: darkgreen;
 }
